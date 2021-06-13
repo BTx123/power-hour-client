@@ -40,4 +40,3 @@ jobs:
           BRANCH: deploy
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Update deployment from CI"
