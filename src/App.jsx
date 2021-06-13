@@ -9,7 +9,7 @@ import {
   Input,
   Divider,
 } from "antd";
-import ExternalLink from "../Components/ExternalLink";
+import ExternalLink from "./components/ExternalLink";
 import "./App.scss";
 
 const { Header, Footer, Content } = Layout;

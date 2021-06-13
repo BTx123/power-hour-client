@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
+    index: "./src/index.jsx",
   },
   devtool: "inline-source-map",
   devServer: {
