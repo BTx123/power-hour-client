@@ -1,6 +1,8 @@
 import React from "react";
+
 const ExternalLink = (props) => {
   const { title, link } = props;
+
   return (
     <a href={link} target="_blank">
       {title}
@@ -12,4 +14,5 @@ const ExternalLink = (props) => {
     </a>
   );
 };
+
 export default ExternalLink;
