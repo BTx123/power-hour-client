@@ -1,2 +1,3 @@
-# power-hour
-Power hour yay!
+# Power Hour Client
+
+The Power Hour frontend.
