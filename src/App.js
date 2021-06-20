@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Layout,
@@ -8,9 +8,14 @@ import {
   Card,
   Input,
   Divider,
+  Carousel,
 } from "antd";
 import ExternalLink from "./components/ExternalLink";
+import RightCardPages from "./components/RightCardPages";
 import "./App.scss";
+function onChange(a, b, c) {
+  console.log(a, b, c);
+}
 
 const { Header, Footer, Content } = Layout;
 const { Title } = Typography;
@@ -29,46 +34,111 @@ const App = () => {
           <Row>
             <Col md={{ span: 12, order: 1 }} xs={{ span: 24, order: 2 }}>
               {" "}
-              <Card
-                title="What is Power Hour?"
-                className="centerMargin"
-                extra={
-                  <ExternalLink
-                    title="Learn More"
-                    link="https://en.wikipedia.org/wiki/Power_hour"
-                  />
-                }
-                style={{ width: 350, height: 320 }}
-              >
-                <p>
-                  Drink to your favorite songs for a whole hour (or other
-                  specified amount of time)!
-                  <br />
-                  <br />
-                  If you have a join code, choose "Join an Hour" on the right
-                  and enter the code.
-                  <br />
-                  <br />
-                  If you’re creating a new lobby, choose "Host an Hour".
-                </p>
-              </Card>
+              <Carousel autoplay autoplaySpeed={5000}>
+                <div>
+                  <Card
+                    title="How to play Power Hour"
+                    className="centerMargin"
+                    extra={
+                      <ExternalLink
+                        title="Learn More"
+                        link="https://en.wikipedia.org/wiki/Power_hour"
+                      />
+                    }
+                    style={{ width: 350, height: 320 }}
+                  >
+                    <p>
+                      Drink to your favorite songs for a whole hour (or other
+                      specified amount of time)!
+                      <br />
+                      <br />
+                      If you have a join code, choose "Join an Hour" on the
+                      right and enter the code.
+                      <br />
+                      <br />
+                      If you’re creating a new lobby, choose "Host an Hour".
+                    </p>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    title="Second Page"
+                    className="centerMargin"
+                    extra={
+                      <ExternalLink
+                        title="Learn More"
+                        link="https://en.wikipedia.org/wiki/Power_hour"
+                      />
+                    }
+                    style={{ width: 350, height: 320 }}
+                  >
+                    <p>
+                      Drink to your favorite songs for a whole hour (or other
+                      specified amount of time)!
+                      <br />
+                      <br />
+                      If you have a join code, choose "Join an Hour" on the
+                      right and enter the code.
+                      <br />
+                      <br />
+                      If you’re creating a new lobby, choose "Host an Hour".
+                    </p>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    title="Third Page"
+                    className="centerMargin"
+                    extra={
+                      <ExternalLink
+                        title="Learn More"
+                        link="https://en.wikipedia.org/wiki/Power_hour"
+                      />
+                    }
+                    style={{ width: 350, height: 320 }}
+                  >
+                    <p>
+                      Drink to your favorite songs for a whole hour (or other
+                      specified amount of time)!
+                      <br />
+                      <br />
+                      If you have a join code, choose "Join an Hour" on the
+                      right and enter the code.
+                      <br />
+                      <br />
+                      If you’re creating a new lobby, choose "Host an Hour".
+                    </p>
+                  </Card>
+                </div>
+                <div>
+                  <Card
+                    title="Fourth Page"
+                    className="centerMargin"
+                    extra={
+                      <ExternalLink
+                        title="Learn More"
+                        link="https://en.wikipedia.org/wiki/Power_hour"
+                      />
+                    }
+                    style={{ width: 350, height: 320 }}
+                  >
+                    <p>
+                      Drink to your favorite songs for a whole hour (or other
+                      specified amount of time)!
+                      <br />
+                      <br />
+                      If you have a join code, choose "Join an Hour" on the
+                      right and enter the code.
+                      <br />
+                      <br />
+                      If you’re creating a new lobby, choose "Host an Hour".
+                    </p>
+                  </Card>
+                </div>
+              </Carousel>
             </Col>
             <Col md={{ span: 12, order: 2 }} xs={{ span: 24, order: 1 }}>
-              <Card
-                title="Welcome"
-                className="centerMargin"
-                style={{ width: 350, height: 320 }}
-              >
-                <br />
-                <br />
-                <Input placeholder="Enter a nickname" />
-                <br />
-                <br />
-                <div className="center">
-                  <br />
-                  <Button type="primary">Get Started</Button>
-                </div>
-              </Card>
+              <RightCardPages></RightCardPages>
             </Col>
           </Row>
         </Content>

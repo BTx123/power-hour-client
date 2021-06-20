@@ -23,3 +23,11 @@
 .content {
   background: white;
 }
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: rgba(43, 43, 43, 0.76);
+  opacity: 1;
+}
+.ant-carousel .slick-dots li button {
+  background: rgb(146, 146, 146);
+}
